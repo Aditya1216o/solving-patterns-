@@ -183,9 +183,65 @@ void print10(int n ) {
     cout << endl;
   }
  }
+
+ void print17(int n) {
+   int counter = n;
+
+   for(int i = 0 ; i < n ; i++){
+     char ch = 'A' + (counter - 1) ;
+
+    for(int j = 0 ; j <= i ; j++){
+      char local_char = ch + j;
+      cout << local_char << " ";
+    }
+    counter --;
+    cout << endl;
+  }
+ } 
+ 
+
+ void print18(int n) {
+
+  //  int counter = 1;
+
+   for(int i = 0 ; i < n ; i++){
+     
+
+    for (int j = 0 ; j <= (n - i - 1) ; j++){
+      cout << " ";
+    }
+
+    char ch = 'A';
+    int bp = (2*i+1) /2;
+    for (int j = 1 ; j <=2*i+1 ; j++){
+      
+      cout << ch ;
+      if(j <= bp) ch++;
+      else ch--;
+    } 
+    
+    for (int j = 0 ; j <= (n - i - 1) ; j++){
+      cout << " ";
+    }
+    
+    
+  
+    cout << endl;
+  }
+ }
+ void print19(int n ){
+   for (int i = 0; i < n; i++) {
+     for (char c = 'E'-i ; c <='E'; c++){
+        cout << c << " ";
+     }
+     cout << endl;
+   }
+ }
+ 
+
 int main() {
     int n;
     cin >> n;
   
-  print16(n);
+  print17(n);
           }
